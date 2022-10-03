@@ -35,7 +35,7 @@ $ yarn start or npm run start
  
 ## 팀 정보 (Team Information)
 - 김나훈 (sem2646@naver.com), Github Id: sem2466
-- 최강우 (Kangwooted@naver.com), Github Id: Kangwooted
+- 최강우 (kangwooted@naver.com), Github Id: Kangwooted
 
 ## 저작권 및 사용권 정보 (Copyleft / End User License)
  * [MIT]([https://github.com/osamhack2022/CLOUD_WEB_SONAGIDOTCOM_SONAGI/license.md])
