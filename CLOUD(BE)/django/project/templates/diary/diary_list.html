@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+{% if diary_list %}
+    <ul>
+    {% for diary in diary_list %}
+        <li><a href="{% url 'diary:detail' diary.id %}">{{ diary.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>아직 작성한 일기가 없습니다.</p>>
+{% endif %}
+
+<a href="{% url 'diary:diary_write' %}">일기 쓰기</a>
+
+{% endblock %}

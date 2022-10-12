@@ -7,3 +7,6 @@ class diary(models.Model):
     content = models.TextField()
     date = models.DateTimeField()
     USER_ID = models.CharField(max_length=36)
+
+    def __str__(self):
+        return self.title

@@ -4,6 +4,6 @@ from django.contrib import admin
 from .models import diary
 
 class DiaryAdmin(admin.ModelAdmin):
-    search_fields = ['subject']
+    search_fields = ['title']
 
 admin.site.register(diary, DiaryAdmin)
