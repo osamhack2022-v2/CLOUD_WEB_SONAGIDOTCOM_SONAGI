@@ -2,10 +2,14 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from .models import diary
 from .forms import DiaryForm
+from django.core.paginator import Paginator
 
 def index(request):
+    page = request.GET.get('page', '1')
     diary_list = diary.objects.order_by('-date')
-    context = {'diary_list':diary_list}
+    paginator = Paginator(diary_list,10)
+    page_obj = paginator.get_page(page)
+    context = {'diary_list':page_obj}
     return render(request, 'diary/diary_list.html', context)
 
 def detail(request, diary_id): 
