@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
 {% block content %}
-{% load static %}
-<link rel = "stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}"> 
 <div class="container my-3">
     <table class="table">
         <thead>
@@ -31,7 +29,7 @@
     </table>
     <a href="{% url 'diary:diary_write' %}" class="btn btn-primary">일기 쓰기</a>
 </div>
-
+{% endblock %}
 
 
 <!--{% if diary_list %}
@@ -46,4 +44,3 @@
 
 <a href="{% url 'diary:diary_write' %}">일기 쓰기</a>-->
 
-{% endblock %}
