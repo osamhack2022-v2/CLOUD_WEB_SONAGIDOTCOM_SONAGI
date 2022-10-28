@@ -26,11 +26,11 @@
         </div>
         <div class="mb-3">
             <label for="enlist_day">입대일</label>
-            <input type="date" name="enlist_day" id="enlist_day" value="{{ form.enlist_date.value|default_if_none:'2022-10-01' }}">
+            <input type="date" name="enlist_day" id="enlist_day" value="{{ form.enlist_day.value|default_if_none:'2022-10-01' }}">
         </div>
         <div class="mb-3">
             <label for="discharge_day">전역일</label>
-            <input type="date" name="discharge_day" id="discharge_day" value="{{ form.discharge_date.value|default_if_none:'2022-10-01' }}">
+            <input type="date" name="discharge_day" id="discharge_day" value="{{ form.discharge_day.value|default_if_none:'2022-10-01' }}">
 
         </div>
         <button type="submit" class="btn btn-primary">생성하기</button>
