@@ -38,7 +38,7 @@ $ python3 manage.py runserver
  - http://20.214.203.196:8080/ 으로 접속하여 서비스를 사용하실 수 있습니다.
  
 ## 팀 정보 (Team Information)
-- 김나훈 (sem2646@naver.com), Github Id: sem2466
+- 김나훈 (sem2646@naver.com), Github Id: LiarGames
 - 최강우 (kangwooted@naver.com), Github Id: Kangwooted
 
 ## 저작권 및 사용권 정보 (Copyleft / End User License)
