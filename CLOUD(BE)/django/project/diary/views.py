@@ -16,6 +16,8 @@ def index(request):
 
 def detail(request, diary_id): 
     Diary = get_object_or_404(diary,pk=diary_id)
+    if(Diary.user_id != request.user.id):
+        return HttpResponse("다른 사람이 작성한 일기입니다.")
     context = {'diary' : Diary}
     return render(request, 'diary/diary_detail.html', context)
 # 일기는 원래 자기가 작성한 일기만 볼 수 있어야 하는데, 현재 그 기능이 없어 모든 일기를 열어볼 수 있습니다.
