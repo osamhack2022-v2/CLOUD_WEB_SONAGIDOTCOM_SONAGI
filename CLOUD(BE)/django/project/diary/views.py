@@ -4,6 +4,7 @@ from .models import diary
 from .forms import DiaryForm
 from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 
 def index(request):
     page = request.GET.get('page', '1')
