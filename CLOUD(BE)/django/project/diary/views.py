@@ -7,10 +7,10 @@ from django.contrib.auth.decorators import login_required
 
 def index(request):
     page = request.GET.get('page', '1')
-    diary_list = diary.objects.order_by('-date')
-    paginator = Paginator(diary_list,10)
+    diary_list = diary.objects.order_by('-date').filter(user_id=request.user.id)
+    paginator = Paginator(diary_list2,10)
     page_obj = paginator.get_page(page)
-    context = {'diary_list':page_obj}
+    context = {'diary_list2':page_obj}
     return render(request, 'diary/diary_list.html', context)
 
 def detail(request, diary_id): 
