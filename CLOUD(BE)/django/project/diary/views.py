@@ -17,7 +17,8 @@ def index(request):
 
 def detail(request, diary_id): 
     Diary = get_object_or_404(diary,pk=diary_id)
-    if(Diary.user_id != request.user.id):
+    a = diary.objects.values()
+    if a[diary_id-1]['user_id_id'] != request.user.id:
         return HttpResponse("다른 사람이 작성한 일기입니다.")
     context = {'diary' : Diary}
     return render(request, 'diary/diary_detail.html', context)
